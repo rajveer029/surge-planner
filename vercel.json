@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "api/index.py": { "runtime": "python3.11", "memory": 1024 }
+  },
+  "routes": [
+    { "src": "/v1/surge-plan", "dest": "api/index.py" },
+    { "src": "/healthz", "dest": "api/index.py" }
+  ]
+}
