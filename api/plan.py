@@ -27,7 +27,6 @@ def create_plan(payload: dict):
         ai_min_conf=0.6,
         ai_model="gpt-4o-mini",
     )
-    ts = apply_multipliers(plan, payload.get("baselines", {}))
-    translated = json.dumps(ts, indent=2, ensure_ascii=False, sort_keys=True)
+    translated = apply_multipliers(plan, payload.get("baselines", {}))
     briefing = make_human_nlg(plan, features, env_blocks, translated, model="gpt-4.1-mini")
     return {"translated": translated, "briefing": briefing}
