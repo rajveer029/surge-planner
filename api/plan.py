@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from surge_planner import build_multiplier_plan, apply_multipliers, make_human_nlg
+import json
 
 app = FastAPI(title="Surge Planner API")
 
@@ -26,6 +27,7 @@ def create_plan(payload: dict):
         ai_min_conf=0.6,
         ai_model="gpt-4o-mini",
     )
-    translated = apply_multipliers(plan, payload.get("baselines", {}))
+    ts = apply_multipliers(plan, payload.get("baselines", {}))
+    translated = json.dumps(ts, indent=2, ensure_ascii=False, sort_keys=True)
     briefing = make_human_nlg(plan, features, env_blocks, translated, model="gpt-4.1-mini")
     return {"translated": translated, "briefing": briefing}
