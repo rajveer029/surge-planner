@@ -1,3 +1,4 @@
 # Surge Planner API
 
-## test txt
+### Backend service for hospital surge planning.
+###Accepts operational + epidemiological inputs as JSON
