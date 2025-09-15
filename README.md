@@ -44,6 +44,9 @@ Pull request code
 
 Input JSON format
 - [surge-planner/sample-use/csample_input_format.py](https://github.com/rajveer029/surge-planner/blob/main/sample-use/sample_input_format.py)
+
+Colab Demo
+- [Open Notebook](https://colab.research.google.com/drive/1dqAp3KSHuHRE2znd_TeNn0i0q3-UHk66?usp=sharing)
 ## Author
 
 - [@rajveer029](https://github.com/rajveer029)
