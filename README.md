@@ -30,7 +30,7 @@ An AI-driven API that generates hospital surge plans using generative models and
 
 To run this project, you will need to add the an `OPENROUTER` api key.
 
-`API_KEY = sk-or-v1-***************************************************************`
+`OPENROUTER_API_KEY = sk-or-v1-***************************************************************`
 
 ##use your own key
 
